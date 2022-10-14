@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new artist</title>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <!--CSS stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!--Scripts-->
+    <script defer type="module" src="/scripts/add-new-artist.js"></script>
+
+     <!--Font awesome-->
+     <script src="https://kit.fontawesome.com/c7417eacb1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="add-container">
+        <header class="add-new-header">
+            <h1>Legg til artister</h1>
+            <button onclick="location.href='index.html'" class="btn btn-style btn-outline-light">Vis alle artister</button>
+            <button onclick="location.href='search-artist.html'" id="search-page-btn" class="btn btn-style btn-outline-light">Søk artist</button>
+            <button onclick="location.href='change-delete-artist.html'" id="show-all-btn" class="btn btn-style btn-outline-light">Slett/endre artist</button>
+        </header>
+        
+        <main>
+            <section class="add-new-artist">
+                <h4 class="add-h4">Legg til artist <i style="font-family:'Ubuntu';">(Se bilde meny for tilgjengelige bilder)</i></h4>
+                <div class="new-artist-div">     
+                    <input class="form-control w-50 mb-4" id="artist-name-input" placeholder="Navn på artist" type="text">
+             
+                    <input class="form-control w-50 mb-4" id="artist-age-input" placeholder="Alder" type="number">
+               
+                    <input class="form-control w-50 mb-4" id="artist-country-input" placeholder="Fra land" type="text">
+        
+                    <input class="form-control w-50 mb-4" id="artist-famous-song-input" placeholder="Kjent låt" type="text">
+            
+                    <input class="form-control w-50 mb-4" id="artist-instrument-input" placeholder="Instrument" type="text">
+                
+                    <select class="form-select w-50 mb-4" id="artist-status-input" placeholder="Status (Død/Lever)" type="text">
+                        <option value="Lever" selected>Lever</option>
+                        <option value="Død">Død</option>
+                    </select>
+               
+                    <select class="form-select w-50 mb-4" name="artist-image" id="artist-image-choice">
+                        <option value="" disabled selected>-- Tilgjengelige bilder --</option>
+                        <option value="defaultAvatar.png">Standard avatar (Bilde eksisterer ikke)</option>
+                        <option value="avicii.jpeg">Avicii</option>
+                        <option value="beyonce.jpeg">Beyonce</option>
+                        <option value="afzelius.jpeg">Björn Afzelius</option>
+                        <option value="chrisburgh.jpg">Chris De Burgh</option>
+                        <option value="dollyparton.jpeg">Dolly Parton</option>
+                        <option value="juneCarter.jpeg">June Carter</option>
+                        <option value="kygo.jpeg">Kygo</option>
+                        <option value="slash.jpeg">Slash</option>
+                    </select>
+                    <div class="success-box"><p>Artist lagt til! <i class="fa-solid fa-check"></i></p></div>
+                    <div class="success-box success-box-no"><p>Mangelene felt! <i class="fa-solid fa-xmark"></i></p></div>
+                    <button id="add-artist-btn" class="btn btn-style2 btn-outline-light btn-lg">Legg til artist</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>

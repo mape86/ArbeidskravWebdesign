@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change/delete</title>
+
+     <!--Google fonts-->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+    
+     <!--CSS stylesheets-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <link rel="stylesheet" href="/css/styles.css">
+     
+     <!--Scripts-->
+     <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     <script defer  src="/scripts/change-delete-artist.js" type="module"></script>
+     
+     <!--Font awesome-->
+     <script src="https://kit.fontawesome.com/c7417eacb1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="update-container">
+
+        <header class="update-header">
+            <h1 class="update-header__headline">Endre / slett artist</h1>
+            <button onclick="location.href='index.html'" class="btn btn-style btn-outline-light">Vis alle artister</button>
+            <button onclick="location.href='search-artist.html'" class="btn btn-style btn-outline-light">Søk artist</button>
+            <button onclick="location.href='add-new-artist.html'" class="btn btn-style btn-outline-light">Legg til artist</button>
+        </header>
+
+        <main>
+
+            <section id="artist-list"></section>
+        
+            <!-- Modal -->
+            <div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body">
+                        <label for="edit-artist-name" class="mb-1">Navn </label>
+                        <input id="edit-artist-name" placeholder="Artistens navn" type="text" class="form-control mb-4">
+                        <label for="edit-artist-age" class="mb-1">Alder</label>
+                        <input id="edit-artist-age" placeholder="Artistens alder" type="text" class="form-control mb-4">
+                        <label for="edit-artist-country" class="mb-1">Land</label>
+                        <input id="edit-artist-country" placeholder="Artistens land" type="text" class="form-control mb-4">
+                        <label for="edit-artist-song" class="mb-1">Kjent låt</label>
+                        <input id="edit-artist-song" placeholder="En kjent låt fra aritsten" type="text" class="form-control mb-4">
+                        <label for="edit-artist-instrument" class="mb-1">Instrument</label>
+                        <input id="edit-artist-instrument" placeholder="Artistens instrument" type="text" class="form-control mb-4">
+                        <label for="edit-artist-status" class="mb-1">Status</label>
+                        <select id="edit-artist-status" class="form-select mb-4" aria-label="Artistens status">
+                            <option value="Lever">Lever</option>
+                            <option value="Død">Død</option>
+                            
+                          </select>
+                        <label for="edit-artist-image" class="mb-1">Bilde av artisten</label>
+                        <select id="edit-artist-image" class="form-select mb-4" aria-label="Bilde av artisten">
+                            <option value="defaultAvatar.png">Standard avatar (Bilde eksisterer ikke)</option>
+                            <option value="preus.jpeg">Anne Grete Preus</option>
+                            <option value="avicii.jpeg">Avicii</option>
+                            <option value="harper.jpeg">Ben Harper</option>
+                            <option value="beyonce.jpeg">Beyonce</option>
+                            <option value="dylan.jpeg">Bob Dylan</option>
+                            <option value="springsteen.jpeg">Bruce Springsteen</option>
+                            <option value="afzelius.jpeg">Björn Afzelius</option>
+                            <option value="chrisburgh.jpg">Chris De Burgh</option>
+                            <option value="clemons.jpeg">Clarence Clemons</option>
+                            <option value="dollyparton.jpeg">Dolly Parton</option>
+                            <option value="jerryLee.jpeg">Jerry Lee Lewis</option>
+                            <option value="cash.jpeg">Johnny Cash</option>
+                            <option value="juneCarter.jpeg">June Carter</option>
+                            <option value="kygo.jpeg">Kygo</option>
+                            <option value="knopfler.jpeg">Mark Knopfler</option>
+                            <option value="waters.jpeg">Roger Waters</option>
+                            <option value="slash.jpeg">Slash</option>
+                            <option value="turner.jpeg">Tina Turner</option>
+                            <option value="vangelis.jpeg">Vangelis</option>
+                            <option value="houston.jpeg">Whitney Houston</option>
+                          </select>
+
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Avbryt</button>
+                    <button id="save-btn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Lagre endringer</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    
+</body>
+</html>

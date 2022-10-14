@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search artist</title>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <!--CSS stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Scripts -->
+    <script defer type="module" src="/scripts/search-artist.js"></script>
+
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/c7417eacb1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="search-container">
+
+        <header>
+            <h1>Søk etter artist</h1>
+            <button onclick="location.href='index.html'" class="btn btn-style btn-outline-light">Vis alle artister</button>
+            <button onclick="location.href='add-new-artist.html'" id="add-new-page-btn" class="btn btn-style btn-outline-light">Legg til artist</button>
+            <button onclick="location.href='change-delete-artist.html'" id="show-all-btn" class="btn btn-style btn-outline-light">Slett/endre artist</button>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <div class="search-div">
+                    <select name="select-status" class="form-select w-50 mb-4" id="search-status-input">
+                        <option value="" disabled selected>-----Velg status-----</option>
+                        <option value="">Alle</option>
+                        <option value="Død">Død</option>
+                        <option value="Lever">Levende</option>
+                    </select>
+                </div>
+                <div class="search-div">
+                    <input class="form-control w-50 mb-4" id="search-instrument-input" type="text" placeholder="Søk etter artistens intstument">
+                    <button id="search-artist-btn" class="btn btn-style btn-outline-light btn-md">Søk artist</button>
+                </div>
+            </div>
+            <section class="show-search-artists-section">
+
+            </section>
+
+        </main>
+
+    </div>
+    
+</body>
+</html>
