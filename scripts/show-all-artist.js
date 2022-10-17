@@ -2,6 +2,7 @@ import ArtistModule from "./modules/ArtistModule.js";
 
 const showArtistSection = document.querySelector(".show-artists-section");
 const mainHeaderCounter = document.querySelector(".main-header__counter");
+let header = document.getElementById("main-header");
 
 const getAllArtists = () => {
   let htmlOutput = "";
@@ -32,5 +33,19 @@ const getAllArtists = () => {
 
   showArtistSection.innerHTML = htmlOutput;
 };
+
+// window.onscroll = function () {
+//   stickyFunction();
+// };
+
+// let sticky = header.offsetTop;
+
+// function stickyFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
 
 getAllArtists();
